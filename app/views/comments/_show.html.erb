@@ -1,0 +1,10 @@
+<h1><%= @post.comments.count %> Comments</h1>
+<% @comments.each do |c| %>
+  <p>
+    <%= c.title %>
+  </p>
+  <p>
+  <%= c.body %>
+  </p>
+<% end %>
+

@@ -1,0 +1,16 @@
+<h3>Join the discussion</h3>
+
+<%= form_for([@post, @comment]) do |c| %>
+<p>
+<%= c.label :title %>
+<%= c.text_field :title %>
+</p>
+<p>
+<%= c.label :body %>
+<%= c.text_area :body %>
+</p>
+<p>
+<%= c.submit %>
+</p>
+
+<% end %>

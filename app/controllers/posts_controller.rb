@@ -6,6 +6,8 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   def new
@@ -34,6 +36,8 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
   end
 
   def destroy
+    @post.destroy
+    redirect_to posts_path
   end
 
   private
